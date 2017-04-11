@@ -1,21 +1,25 @@
-$(document).on("click touch", "#item1", function() {
+$(document).on("touchstart click", "#item1", function(e) {
 	$('#pouches, #cutting, #printing').hide();
     $('#films').slideToggle('slow');
+    e.preventDefault();
 });
 
-$(document).on("click touch", "#item2", function() {
+$(document).on("touchstart click", "#item2", function(e) {
     $('#films, #cutting, #printing').hide();
     $('#pouches').slideToggle('slow');
+    e.preventDefault();
 });
 
-$(document).on("click touch", "#item3", function() {
+$(document).on("touchstart click", "#item3", function(e) {
     $('#pouches, #films, #printing').hide();
 	$('#cutting').slideToggle('slow');
+    e.preventDefault();
 });
 
-$(document).on("click touch", "#item4", function() {
+$(document).on("touchstart click", "#item4", function(e) {
    	$('#pouches, #cutting, #films').hide();
   	$('#printing').slideToggle('slow');
+    e.preventDefault();
 });
 
 $(document).ready(function(){
