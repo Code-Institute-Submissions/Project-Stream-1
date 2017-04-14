@@ -12,18 +12,17 @@
 		</p>
 </div>
 
-         
+<form 
+	ng-submit="submit(contactform)" 
+	name="contactform" 
+	class="form-horizontal" 
+	role="form"> 
   
     <div class="container ">
         <div class=" margin-top ">
             <div class="col-md-6">
 			<div class="contact-form">
 				<h2>Contact Form</h2>
-				<form 
-					ng-submit="submit(contactform)" 
-					name="contactform" 
-					class="form-horizontal" 
-					role="form">
                     <div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
                         <label for="inputName" class="col-lg-2 control-label">Name</label>
                         <div class="col-lg-10">
@@ -82,16 +81,16 @@
                             </button>
                         </div>
                     </div>
-                </form>
+               
                
                 <div class="result" ng-class="result">
 					{{ resultMessage }}<br>
 				</div>
 			</div>
+			</div>
 		</div>
-	</div>
-        </div>
     </div>
+</form>
 
 
 
